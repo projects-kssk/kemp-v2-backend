@@ -6,7 +6,7 @@ if (env.dbClient !== "postgres") {
   throw new Error(`Unsupported DB_CLIENT: ${env.dbClient}`);
 }
 
-const logging = env.nodeEnv === "development" ? console.log : false;
+const logging = env.dbLogging ? console.log : false;
 
 export const sequelize = env.databaseUrl
   ? new Sequelize(env.databaseUrl, {

@@ -20,6 +20,7 @@ export const env = {
   dbName: process.env.DB_NAME,
   dbUser: process.env.DB_USER,
   dbPassword: process.env.DB_PASSWORD,
+  dbLogging: process.env.DB_LOGGING === "true",
 };
 
 export const requiredDatabaseEnv = () => ({
