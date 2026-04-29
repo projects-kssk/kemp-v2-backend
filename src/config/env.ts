@@ -21,6 +21,9 @@ export const env = {
   dbUser: process.env.DB_USER,
   dbPassword: process.env.DB_PASSWORD,
   dbLogging: process.env.DB_LOGGING === "true",
+  betterAuthSecret: requiredEnv("BETTER_AUTH_SECRET"),
+  betterAuthUrl: process.env.BETTER_AUTH_URL ?? "http://localhost:4000",
+  corsOrigin: process.env.CORS_ORIGIN ?? "http://localhost:3000",
 };
 
 export const requiredDatabaseEnv = () => ({
